@@ -24,12 +24,12 @@
 # - Need to figure out where to start the loop. Kinda see if we can figure out the largest number that we can get
 #   without going over the actual answer...
 
-def mySqrt_(x):
+def mySqrt(x):
     if x == 0:
         return 0
 
     prev = 1
-    for i in range(1, x + 1):
+    for i in range(1, int(x / 3) + 1):
         if i**2 <= x:
             prev = i
         else:
@@ -38,7 +38,7 @@ def mySqrt_(x):
     return prev
 
 # TODO implement some other way
-def mySqrt(x):
+def mySqrt_(x):
     if x == 0:
         return 0
 
@@ -50,5 +50,5 @@ def mySqrt(x):
 
 
 if __name__ == "__main__":
-    x = 2147395599
+    x = 4
     print(f"Square root of {x} is {mySqrt(x)}")
