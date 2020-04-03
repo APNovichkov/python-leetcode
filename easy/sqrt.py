@@ -28,12 +28,13 @@ def mySqrt(x):
     if x == 0:
         return 0
 
-    prev = 1
-    for i in range(1, int(x / 3) + 1):
+    i = 0
+    while True:
         if i**2 <= x:
             prev = i
         else:
             return prev
+        i += 1
 
     return prev
 
