@@ -20,9 +20,14 @@
 # - Well, easiest way is to run through integers up to 8, and square them and see if the output is
 #   equal to x, and keep track of the previous integer. If at any point we get squared product that is
 #   larger than x, we need to return that previous integer. Ok this one fails memory in leetCode.. but it is a working solution!
+
 # More thoughts
+# - Need to use a while loop instead of a for loop, that way we save memory.
+# - This ends up being slow anyways, and only beats 5% of accepted submissions on leetcode, but it submitted and passed!
+
+# Additional thoughs:
 # - Need to figure out where to start the loop. Kinda see if we can figure out the largest number that we can get
-#   without going over the actual answer...
+#   without going over the actual answer... Am not sure how to do that though....
 
 def mySqrt(x):
     if x == 0:
@@ -37,17 +42,6 @@ def mySqrt(x):
         i += 1
 
     return prev
-
-# TODO implement some other way
-def mySqrt_(x):
-    if x == 0:
-        return 0
-
-    p_vals = range(int(x / 2))
-
-    found_sqrt = False
-    while not found_sqrt:
-        pass
 
 
 if __name__ == "__main__":
